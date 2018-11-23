@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ch-zh">
+<head>
+    <meta charset="UTF-8" />
+    <title>My answer</title>
+</head>
+<body>
+    <form action="/getin" method="post">
+        <div>
+            <label for="username">姓名：</label>
+            <input id="username" type="text" placeholder="用户名"/>
+        </div>
+        <div>
+            <label for="passwd">密码：</label>
+            <input id="passwd" type="password" placeholder="*******" />
+        </div>
+        <div>
+            <label for="">性别：</label>
+                <input type="radio" name="sex"  id="male" checked />
+                <label for="male">男</label>
+                <input type="radio" name="sex" id="female" />
+                <label for="female">女</label>
+
+        </div>
+        <div>
+            <label for="">取向：</label>
+                <input type="radio" name="direct"  id="male1" />
+                <label for="male1">男</label>
+                <input type="radio" name="direct" id="female1" checked />
+                <label for="female1">女</label>
+
+        </div>
+        <div>
+            <label>爱好：</label>
+                <input type="checkbox" name="" value="" id="data">
+                <label for="data">data</label>
+                <input type="checkbox" name="" value="" id="hangout" checked>
+                <label for="hangout">旅游</label>
+                <input type="checkbox" name="" value="" id="animal" checked>
+                <label for="animal">宠物</label>
+
+        </div>
+        <div>
+            <label>评论：</label>
+                <textarea name="textarea" rows="10" cols="30">ddd</textarea>
+
+        </div>
+        <div>
+            <label>我的car：</label>
+            <select name="car">
+                <option value="">奔驰</option>
+                <option value="">奥迪</option>
+                <option value="" selected>萨博</option>
+                <option value="">兰博基尼</option>
+            </select>
+            <input type="submit" value="提交">
+        </div>
+    </form>
+</body>
+</html>
