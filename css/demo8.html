@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>导航条</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			margin: 20px;
+		}
+		a{
+			text-decoration: none;
+		}
+		.content{
+			text-align: center;
+/*			margin: 8px: 
+			border:300px solid black;*/
+		}
+		.content>div{
+			display: inline;
+			margin: 5px;
+			padding: 10px;
+			border-radius: 5px;
+		}
+		.steal{
+			background-color: #149487;
+		}	
+		.yellow{
+			background-color: #fee852;
+		}	
+		.orange{
+			background-color: #fc962b;
+		}	
+		.red{
+			background-color: #f1453e;
+		}	
+		.green{
+			background-color: #4eac56;
+		}		
+		.steal>a{
+			color: #fff;
+		}	
+		.yellow>a{
+			color: #000;
+		}
+		.orange>a{
+			color: #000;
+		}
+		.red>a{
+			color: #fff;
+		}
+		.green>a{
+			color: #fff;
+		}	
+		.content>div:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            transition: all .3s;
+        }
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="steal">
+			<a href="#">steal</a>
+		</div>	
+		<div class="yellow">
+			<a href="#">yellow</a>
+		</div>	
+		<div class="orange">
+			<a href="#">orange</a>
+		</div>	
+		<div class="red">
+			<a href="#">red</a>
+		</div>	
+		<div class="green">
+			<a href="#">green</a>
+		</div>	
+	</div>
+
+</body>
+</html>
