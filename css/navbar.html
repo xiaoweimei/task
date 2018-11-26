@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>navdemo</title>
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		a{
+			color: #333;
+			text-decoration: none;
+		}
+		nav{
+			width: 500px;
+			margin: 10px auto 0;
+			box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.3);
+		}
+		nav>ul>li{
+			float:left;
+			position: relative;
+
+		}
+		nav>ul>li:hover .child{
+			display: block;
+		}
+		nav a{
+			display: block;
+			padding: 10px 10px;
+			min-width: 50px;
+		}
+		nav a:hover{
+			color: #fff;
+			background: rgb(0,0,0,0.4)
+		}
+		nav::after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		nav .child{
+			position: absolute;
+			top:100%;
+			box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.3);
+			display: none;
+		}
+		
+	</style>
+</head>
+<body>
+	<nav class="naver">
+		<ul class="daohang">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">作品</a></li>
+			<li><a href="#">更多</a>
+				<ul class="child">
+					<li><a href="">前端</a></li>
+					<li><a href="">后端</a></li>
+					<li><a href="">移动端</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	
+</body>
+</html>
