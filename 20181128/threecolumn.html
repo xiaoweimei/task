@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>two column</title>
+	<style>
+		.left{
+			width: 200px;
+			height: 600px;
+			float: left;
+			background-color: #f00;
+		}
+		.right{
+			width: 200px;
+			height: 600px;
+			float: right;
+			background-color: #00f;
+		}
+		.middle{
+			margin-left: 210px;
+			margin-right: 210px;
+			height: 800px;
+			background-color: #fdbfca;
+			}
+		.content:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="left"></div>
+
+		<div class="right"></div>
+		<div class="middle"></div>
+
+	</div>
+</body>
+</html>
