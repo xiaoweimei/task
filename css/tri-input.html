@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tri-input</title>
+	<style>
+		*{
+			padding: 0;
+			margin:0; 
+		}
+		.contain{
+			margin:0 auto; 
+		}
+		.tri {
+			width: 400px;
+			height: 200px;
+			border:1px solid #949494; 
+			margin:40px auto; 
+			position: relative;
+		}
+		.box1{
+			width: 0px;
+			height: 0px;
+			border-top: 20px solid  transparent; 
+			border-right: 20px solid  transparent; 
+			border-bottom: 20px solid #949494; 
+			border-left: 20px solid  transparent; 
+		}
+		.box1{
+/*			transform: rotate(45deg);*/
+			position: absolute;
+			left:30px;
+			top:-40px;
+/*			background-color: #878787;*/
+		}
+		.box2{
+			width: 0px;
+			height: 0px;
+			border-top: 20px solid  transparent; 
+			border-right: 20px solid  transparent; 
+			border-bottom: 20px solid #fe0302; 
+			border-left: 20px solid  transparent; 
+		}
+		.box2{
+			transform: rotate(45deg);
+			position: absolute;
+			right:-21px;
+			top:-21px;
+/*			background-color: #878787;*/
+		}
+		.box3{
+			width: 20px;
+			height: 20px;
+			background-color: #fff;
+			border-left: 1px solid #949494; 
+			border-top: 1px solid #949494; 
+		}
+		.box3{
+			transform: rotate(45deg);
+			position: absolute;
+			left:30px;
+			top:-11px;
+/*			background-color: #878787;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="contain">
+		<div class="tri">
+			<div class="box box1"></div>
+		</div>
+		<div class="tri">
+			<div class="box box2"></div>
+		</div>
+		<div class="tri">
+			<div class="box box3"></div>
+		</div>
+	</div>
+</body>
+</html>
