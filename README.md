@@ -1,2 +1,2 @@
 # task
-homework
+some small demo of html and css
