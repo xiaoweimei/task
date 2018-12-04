@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>project</title>
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_945492_wi0pflp19k.css">
+	<style>
+	/*css reset*/
+		* {
+			padding: 0;
+			margin: 0; 
+		}
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+		ul {
+			list-style: none;
+		}
+	/*css reset*/
+		html {
+			min-width: 900px;
+			height: 100%;
+			color: #000;
+		}
+		header {
+		/*	background-color: #fff;*/
+			height: 100%;
+			background-image: url(nav.jpg);
+			background-size: 100% 100%;
+			background-repeat: no-repeat; 
+		}
+		#page-top>nav>span {
+			display: inline-block;
+			margin : 30px; 
+			color: #718220;
+			font-size: 30px;
+			float: left;
+		}
+
+		/*清除浮动*/
+		.clearflex::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		/*清除浮动*/
+		nav ul{
+			margin-right: 100px;
+			margin-top: 0px; 
+			float: right;
+
+		}
+		nav li{
+			float: left;
+			margin:30px; 
+		} 
+		nav li>a:hover{
+			color:#ff0;
+		}
+		.header-body{
+			margin-top: 200px;
+			text-align: center;
+			color: #fff;
+			text-align: center;
+		}
+		.header-button>a{
+			display: block;
+			padding: 100px;
+			width: 200px;
+			color: #fff;
+			font-size: 20px;
+			line-height: 50px;
+			border-radius: 5px;
+			text-align: center;
+			margin: 50px auto 150px;  
+			background-color: #fa0;
+			opacity: 0.8;
+			padding: 5px 20px;
+		}
+		.header-button>a:hover {
+			opacity: 1;
+		}
+		.header-body>h1{
+			font-size: 72px;
+		}
+		.header-body>h2{
+			font-size: 36px;
+			font-style: italic;
+		}
+/*首页头部首页头部*首页头部首页头部*首页头部首页头部*首页头部首页头部*首页头部首页头部*/
+		#services{
+			background-color: #fff;
+			min-width:900px;
+			padding:60px 50px 40px 50px; 
+		}
+		.head {
+			text-align: center; 
+			margin-bottom: 80px;
+			margin-top: 80px;
+		}
+
+		.head>h1{
+			font-size: 36px;
+			margin-bottom: 20px;
+			color:#222;
+		}
+		.head>p{
+			font-size: 15px;
+			font-style: italic;
+			color:#666;
+		}
+		.body{
+			margin-top: 50px;
+			margin-bottom: 50px;
+			padding-bottom: 80px;
+		}
+		.iconfont{
+			width: 100px;
+			height: 100px;
+			display: inline-block;
+			font-size: 80px;
+			text-align: center;
+			color: #fff;
+			background-color: #fdd038;
+			border-radius:50%;
+			margin:20px; 
+		}
+		.section1-child {
+			width: calc(33.33% - 40px);
+			float: left;
+			text-align: center;
+			margin:20px; 
+		}
+		section h2{
+			font-size: 24px;
+			color: #333;
+			margin-bottom: 20px;
+		}
+		section p{
+			font-size: 14px;
+			color: #999;
+		}
+/*第一部分第一部分第一部分第一部分第一部分第一部分第一部分第一部分第一部分第一部分第一部分第一部分*/
+		#portfolio{
+			background-color: #eee;
+			min-width:900px;
+			padding:120px 50px 40px 50px; 
+		}
+/*第二部分第二部分第二部分第二部分第二部分第二部分第二部分第二部分第二部分第二部分第二部分第二部分*/
+		.section2-child{
+            position:relative;
+            background-color:#fff;
+            width:calc(33.33% - 40px);
+            text-align:center;
+            padding: 0 0 20px 0;
+            float: left;
+            margin: 20px;
+        }
+        .section2-child>figcaption:hover{
+            cursor: pointer;
+        }
+        .img-portfolio{
+            background-color:#f00;
+            position: relative;
+        }
+        .img-portfolio>img{
+            display:block;
+            width: 100%;
+            height:250px;
+        }
+        .img-portfolio>img:hover{
+            opacity:.3;
+            z-index:2;
+            cursor: pointer;
+            display: block;
+        }
+        .img-portfolio>img:hover .icon{
+        	display: block;
+        }
+        .img-portfolio .icon{
+        	position: absolute;
+        	top: 53px;
+        	right: 110px;
+        	display: none;
+        }
+/*第三部分第三部分第三部分第三部分第三部分第三部分第三部分第三部分第三部分第三部分第三部分第三部分*/
+		#about>.body {
+			width: 500px;
+			margin:0 auto; 
+		}
+		#about>.body>hr{
+			width: 1000px;
+			border-bottom: 4px solid #999;
+			transform: rotate(90deg);
+			position: relative;
+			top: 550px;
+			right:245px;
+		}
+		.img-about{
+			display: inline;
+		}
+		.img-about>img{
+            display:line-block;
+            width: 120px;
+            height:120px;
+            border: 5px solid #ddd; 
+            border-radius: 50%;
+            text-align: center; 
+        }
+        #about .img1{
+			float: right;
+        }
+        #about .img2{
+			float: left;
+        }
+        #about .img3{
+			float: right;
+        }
+        #about .img4{
+			float: left;
+        }
+
+        #about figure{
+        	margin-bottom: 70px;
+        }
+        #about figcaption{
+        	color: #000;
+        	margin-bottom: 5px;
+
+        }
+        #about>.body p{
+        	font-size: 15px;
+        	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+		
+        .article1{
+        	float: right;
+        	text-align: right;
+        	width: 300px;
+        	margin-right:20px;
+        }
+        .article2{
+        	float: left;
+        	text-align: left;
+        	width: 300px;
+        	margin-left:20px;
+        }
+        .article3{
+        	float: right;
+        	text-align: right;
+        	width: 300px;
+        	margin-right:20px;
+        }
+        .article4{
+        	float: left;
+        	text-align: left;
+        	width: 300px;
+        	margin-left:20px;
+        }
+        #about .figure1{
+        	position: relative;
+        	right: 183px;
+        }
+        #about .figure2{
+        	position: relative;
+        	left: 189px;
+        }
+         #about .figure3{
+        	position: relative;
+        	right: 183px;
+        }
+        #about .figure4{
+        	position: relative;
+        	left: 189px;
+        }        
+        #about>.footer{
+        	height: 120px;
+        	width: 120px;
+        	border:5px solid #eee; 
+        	background-color: #ff0;
+        	margin: 0 auto;
+        	color: #fff;
+        	border-radius:50%;
+        	font-size: 30px; 
+        	text-align: center;
+        	margin-bottom: 100px;
+        }    
+        #about>.footer>p{
+        	padding: 30px;
+        }   
+/*第四部分第四部分第四部分第四部分第四部分第四部分第四部分第四部分第四部分第四部分第四部分第四部分*/
+		#team{
+			background-color: #eee;
+			min-width:900px;
+			padding:120px 50px 40px 50px; 
+		}
+		#team>.body{
+			padding:0 auto;
+			text-align: center;
+			margin-bottom: 0px;
+			padding-bottom: 30px;
+
+		}
+		.section4-child{
+			width: 33.33%;
+			text-align: center;
+			float: left; 
+		}
+        .img-team>img{
+            display:block;
+            width: 225px;
+            height:225px;
+            border: 5px solid #fff; 
+            border-radius: 50%;
+            margin:0 auto; 
+        }
+        .font4{
+        	width: 50px;
+        	height: 50px;
+        	font-size: 30px;
+        	background-color: #000;
+        	margin:5px; 
+
+        }
+		.font4:before{
+        	position: relative;
+        	top: 5px;
+		}
+		.font4:hover{
+			cursor: pointer;
+			background-color: #ff0;
+		}
+		#team>.footer{
+			width: 700px;
+			margin:0 auto 100px auto;
+			text-align: center; 
+		}
+/*第五部分第五部分第五部分第五部分第五部分第五部分第五部分第五部分第五部分第五部分第五部分第五部分*/
+		#contact {
+			padding-top: 120px;
+		/*	background-color: #fff;*/
+			height: 100%;
+			background-image: url(contact-back.jpg);
+			background-size: 100% 100%;
+			background-repeat: no-repeat; 
+			opacity: 1;
+		}
+		#contact input{
+			display: block;
+			padding: 20px;
+			width: 400px;
+			margin-bottom:20px; 
+			margin-right: 20px;
+		}
+		.personal-information{
+			float:left;
+		}
+		.personal-messenge{
+			float: right;
+		}
+		#contact>.body{
+			margin:0 200px;
+		}
+
+		#contact textarea{
+			display: block;
+			width: 410px;
+			height: 177px;
+			color: #000;
+			float: left;
+			padding: 20px;
+		}
+/*footer部分footer部分footer部分footer部分footer部分footer部分footer部分footer部分footer部分footer部分*/
+		footer{
+			background-color: #eee;
+			color: #000;
+			text-align: center;
+			min-width: 900px;
+			height: 100px;
+		}
+		footer a{
+			color: #f0f;
+		}
+		footer a:hover{
+			text-decoration: underline;
+		}
+		footer>.section-child{
+			display: inline;
+			margin-left: 200px;
+			margin-right:200px;
+		}
+		footer span,
+		footer a{
+			line-height: 100px;
+		}
+	</style>
+<!-- html部分html部分html部分html部分html部分html部分html部分html部分html部分html部分html部分 -->
+</head>
+<body>
+<!-- 首页头部 -->
+	<header id="page-top">
+		<nav class="clearflex">
+			<span><a href="#page-top" style="color: #ff0">Start Project</a></span>
+			<ul>
+				<li><a href="#services">INTRODUCTION</a></li>
+				<li><a href="#portfolio">VIEW</a></li>
+				<li><a href="#about">HISTORY</a></li>
+				<li><a href="#team">PERSONAGE</a></li>
+				<li><a href="#contact">CONTACT</a></li>
+			</ul>
+		</nav>
+		<div class="header-body">
+			<h2>Welcome To Our City!</h2>
+			<h1>IT'S NICE TO MEET YOU</h1>
+			<div class="header-button"><a href="">TELL ME MORE</a></div>
+		</div>
+	</header>
+<!-- 第一部分第一部分第一部分第一部分第一部分第一部分第一部分第一部分第一部分第一部分第一部分第一部分第一部分 -->
+	<section id="services">
+		<div class="head">
+			<h1>INTRODUCTION</h1>
+			<p>An Overall Introduction to Luoyang</p>
+		</div>
+		<div class="body clearflex">
+			<div class="section1-child">
+				<div class="iconfont icon-house"></div>
+				<h2>View</h2>
+				<p>Located in the northwest of Henan Province, Luoyang borders the Qinling Mountains in the West and the plain in the east. It has beautiful scenery.</p>
+			</div>
+			<div class="section1-child">
+				<div class="iconfont icon-window"></div>
+				<h2>History</h2>
+				<p>Luoyang has a long history, with more than 3000 years of historical accumulation. Thirteen dynasties successively established their capital here.</p>
+			</div>
+			<div class="section1-child">
+				<div class="iconfont icon-door"></div>
+				<h2>Personage</h2>
+				<p>In the course of history, many famous figures emerged, such as Cao Cao, Emperor Wei Wu, Liu Xiu, Emperor Guangwu and Emperor Wu Zetian.</p>
+			</div>
+
+		</div>
+
+	</section>
+<!-- 第二部分第二部分第二部分第二部分第二部分第二部分第二部分第二部分第二部分第二部分第二部分第二部分 -->
+	<section id="portfolio">
+		<div class="head">
+			<h1>VIEW</h1>
+			<p>Natural scenery and humanistic scenery.</p>
+		<div class="body clearflex">
+			<figure class="section2-child">
+    			<div class="img-portfolio" >
+	        	    <img src="section2-img1.jpg" alt="">
+	        	    	<div class="icon iconfont icon-house"></div>
+   			 	</div>
+    			<figcaption>the Natural scenery</figcaption>
+    			<p>Beauty Scenery</p>
+			</figure>
+			<figure class="section2-child">
+    			<div class="img-portfolio" >
+	        	    <img src="section2-img2.jpg" alt="">
+   			 	</div>
+    			<figcaption>the Humanistic scenery</figcaption>
+    			<p>Beauty Scenery</p>
+			</figure>
+			<figure class="section2-child">
+    			<div class="img-portfolio" >
+	        	    <img src="section2-img3.jpg" alt="">
+   			 	</div>
+    			<figcaption>the Natural scenery</figcaption>
+    			<p>Beauty Scenery</p>
+			</figure>
+			<figure class="section2-child">
+    			<div class="img-portfolio" >
+	        	    <img src="section2-img4.jpg" alt="">
+   			 	</div>
+    			<figcaption>the Humanistic scenery</figcaption>
+    			<p>Beauty Scenery</p>
+			</figure>
+			<figure class="section2-child">
+    			<div class="img-portfolio" >
+	        	    <img src="section2-img5.jpg" alt="">
+   			 	</div>
+    			<figcaption>the emperor drived six horse</figcaption>
+    			<p>Zhou Dynasty</p>
+			</figure>
+			<figure class="section2-child">
+    			<div class="img-portfolio" >
+	        	    <img src="section2-img6.jpeg" alt="">
+   			 	</div>
+    			<figcaption>the Longmen Grottoes</figcaption>
+    			<p>the Northern Wei Dynasty</p>
+			</figure>
+		</div>
+	</section>
+<!-- 第三部分第三部分第三部分第三部分第三部分第三部分第三部分第三部分第三部分第三部分第三部分第三部分 -->
+	<section id="about">
+		<div class="head">
+			<h1>HISTORY</h1>
+			<p>Bright and long history.</p>
+		</div>
+		<div class="body clearflex">
+			<hr>
+			<figure class="clearflex figure1">
+    			<div class="img-about img1">
+	        	    <img src="section3-img1.jpg" alt="">
+   			 	</div>
+   			 	<div class="artical article1 clearflex">
+	    			<figcaption>770 BC-256 BC</figcaption>
+	    			<figcaption>the Eastern Zhou Dynasty</figcaption>
+	    			<p>After the death of King Zhou You, Prince Yijiu took the throne for King Zhou Ping. In view of Rongjing's fragmentation and the threat of dog-army, King Zhou Ping established the Eastern Zhou Dynasty in 770 B.C. when he built his capital in Luoyi (now Luoyang, Henan Province).</p>
+	    		</div>
+			</figure>
+			<figure class="clearflex figure2">
+    			<div class="img-about img2" >
+	        	    <img src="section3-img2.jpg" alt="">
+   			 	</div>
+   			 	<div class="artical article2 clearflex">
+	    			<figcaption>A.D. 25-A.D. 220</figcaption>
+	    			<figcaption>the Eastern Han Dynasty</figcaption>
+	    			<p>Liu Xiu, the descendant of the imperial clan of the Han Dynasty, took advantage of the outbreak of the Green Forest Chimei Uprising in the late years of Xinmang. In 25 AD, Liu Xiu became emperor, and Luoyang, the capital of Dingdu (the site of Luoyang City in the Wei Dynasty of the Han Dynasty), founded Guangwu Zhongxing.</p>
+	    		</div>
+			</figure>
+			<figure class="clearflex figure3">
+    			<div class="img-about img3" >
+	        	    <img src="section3-img3.jpeg" alt="">
+   			 	</div>
+   			 	<div class="artical article3 clearflex">
+	    			<figcaption>A.D. 581-A.D. 618</figcaption>
+	    			<figcaption>Sui Dynasty</figcaption>
+	    			<p>Yang Zhong, the father of Emperor Wendi of the Sui Dynasty, was once named "Sui Guogong" by the Northern Zhou Dynasty. Yang Jian attacked the title of "Sui" when he took office. The Sui Dynasty was a unified dynasty re-established by the Han people after the five disorders.</p>
+	    		</div>
+			</figure>
+			<figure class="clearflex figure4">
+    			<div class="img-about img4" >
+	        	    <img src="section3-img4.jpeg" alt="">
+   			 	</div>
+   			 	<div class="artical article4 clearflex">
+	    			<figcaption>A.D. 690-A.D. 705</figcaption>
+	    			<figcaption>Wu Zhou dynasty</figcaption>
+	    			<p>Before Wu Zetian declared emperor Wuzhou, she considered where the capital city was, because it played a decisive role in the coming regime, so she made a series of careful preparations for Luoyang, the capital of Dingdu.</p>
+	    		</div>
+			</figure>
+		</div>
+		<div class="footer">
+			<p>BE PART OF OUR STORY!</p>
+		</div>
+	</section>
+<!-- 第四部分第四部分第四部分第四部分第四部分第四部分第四部分第四部分第四部分第四部分第四部分第四部分 -->
+	<section id="team">
+		<div class="head">
+			<h1>PERSONAGE</h1>
+			<p>Some important historical figures.</p>
+		</div>
+		<div class="body clearflex">
+			<figure class="section4-child">
+    			<div class="img-team" >
+	        	    <img src="section4-img1.jpg" alt="">
+   			 	</div>
+    			<figcaption>Empress Wu</figcaption>
+    			<p>Tang Dynasty</p>
+    			<div>
+					<div class="font4 iconfont icon-house"></div>
+					<div class="font4 iconfont icon-window"></div>
+					<div class="font4 iconfont icon-door"></div>
+    			</div>
+			</figure>
+			<figure class="section4-child">
+    			<div class="img-team" >
+	        	    <img src="section4-img2.jpg" alt="">
+   			 	</div>
+    			<figcaption>Emperor Guangwu</figcaption>
+    			<p>Eastern Han Dynasty</p>
+    			<div>
+					<div class="font4 iconfont icon-house"></div>
+					<div class="font4 iconfont icon-window"></div>
+					<div class="font4 iconfont icon-door"></div>
+    			</div>
+			</figure>
+			<figure class="section4-child">
+    			<div class="img-team" >
+	        	    <img src="section4-img3.jpg" alt="">
+   			 	</div>
+    			<figcaption>Cao Cao</figcaption>
+    			<p>The Three Kingdom</p>
+    			<div>
+					<div class="font4 iconfont icon-house"></div>
+					<div class="font4 iconfont icon-window"></div>
+					<div class="font4 iconfont icon-door"></div>
+    			</div>
+			</figure>
+		</div>
+		<div class="footer">
+			<p>BIn addition to political figures, Luoyang has many outstanding writers, thinkers, scientists, educators and so on, such as Zhang Heng, Zuo Si, Li He, Cheng Yi, Cheng Hao and so on.</p>
+		</div>
+	</section>
+<!-- 第五部分第五部分第五部分第五部分第五部分第五部分第五部分第五部分第五部分第五部分第五部分第五部分 -->
+	<section id="contact">
+		<div class="head">
+			<h1 style="color: red;">CONTACT US</h1>
+			<p style="color: red;">Lorem ipsum dolor sit amet consectetur.</p>
+		</div>
+		<div class="body">
+			<form action="get" class="clearflex">
+				<div class="personal-information">
+					<input type="text" placeholder="YOU NAME *">
+					<input type="text" placeholder="YOU EMAIL *">
+					<input type="text" placeholder="YOU PHONE *">
+				</div>
+				<div class="personal-messenge clearflex">
+					<textarea name="" id="messege" cols="30" rows="10" placeholder="YOU MESSENGE *">
+
+					</textarea>
+				</div>
+			</form>
+		</div>
+		<div class="footer">
+			<div class="header-button"><a href="">SEND MESSENGE</a></div>
+		</div>
+	</section>
+<!-- footerfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooter -->
+	<footer>
+		<span>Copyright © Your Website 2018</span>
+		<div class="section-child">
+			<div class="font4 iconfont icon-house"></div>
+			<div class="font4 iconfont icon-window"></div>
+			<div class="font4 iconfont icon-door"></div>
+		</div>
+		<a href="#">Privacy Policy</a>
+		<a href="#">Terms of Use</a>
+	</footer>
+</body>
+</html>
