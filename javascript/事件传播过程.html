@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件传播过程</title>
+	<style>
+		#container,
+		#box,
+		#hello{
+			margin: 20px;
+			padding: 20px;
+			border:2px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">container
+		<div id="box">box
+			<div id="hello">hello</div>
+		</div>
+	</div>
+	<script>
+		container=document.querySelector("#container")
+		box=document.querySelector("#box")
+		hello=document.querySelector("#hello")
+		container.addEventListener('click',function(){console.log('捕获阶段输出container...')},true)
+		box.addEventListener('click',function(){console.log('捕获阶段输出box...')},true)
+		box.addEventListener('click',function(e){e.stopPropagation()},false)
+		hello.addEventListener('click',function(){console.log('捕获阶段输出hello...')},true)
+		hello.addEventListener('click',function(e){console.log(e.target)})
+		container.addEventListener('click',function(){console.log('冒泡阶段输出container...')},false)
+		box.addEventListener('click',function(){console.log('冒泡阶段输出box...')},false)
+		hello.addEventListener('click',function(){console.log('冒泡阶段输出hello...')},false)
+
+	</script>
+</body>
+</html>

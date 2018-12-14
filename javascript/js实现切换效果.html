@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task6</title>
+	<style>
+		.box{
+			margin:10px 0;
+			padding: 10px;
+			border:1px solid #ddd;
+			box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5)
+		}
+		.togg{
+			background-color: #000;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<h1>hello</h1>
+		<p>jirengu</p>
+	</div>
+	<button id='add'>add</button>
+	<button id='remove'>remove</button>
+	<button id='toggle1'>toggle1</button>
+	<button id='toggle2'>toggle2</button>
+
+	<script>
+		var box = document.querySelector('.box')
+		var addbtn = document.querySelector('#add')
+		addbtn.addEventListener('click',function(){box.classList.add('togg')})
+		var removebtn = document.querySelector('#remove')
+		removebtn.addEventListener('click',function(){box.classList.remove('togg')})
+		var toggle1btn = document.querySelector('#toggle1')
+		toggle1btn.addEventListener('click',function(){
+			if(box.classList.contains('togg')){box.classList.remove('togg')}
+			else{box.classList.add('togg')}
+			})
+		var toggle2btn = document.querySelector('#toggle2')
+		toggle2btn.addEventListener('click',function(){box.classList.toggle('togg')})
+
+	</script>
+</body>
+</html>
