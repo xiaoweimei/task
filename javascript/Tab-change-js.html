@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tab-change</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		.content-bar{
+			margin: 50px 300px;
+		}
+		.header{
+			width: 50px;
+			height: 50px;
+			background-color: #999;
+			border-left: 1px solid #aaa;
+			border-top: 1px solid #aaa;
+			float: left;
+			text-align: center;
+			line-height: 50px;
+			cursor: pointer;
+		}
+		.header:last-child{
+			border-right: 1px solid #aaa;
+			border-top: 1px solid #aaa;
+		}
+		.panel{
+			padding: 50px;
+			width: 300px;
+			height: 200px;
+			background-color: #fff;
+			border: 1px solid #aaa;
+			display: none;
+		}
+		.bar:after{
+			content: '';
+			display: block;
+			clear: both;
+		}
+		.active{
+			background-color: #fff;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="content-bar">
+		<div class="bar">
+			<div class="header active">1</div>
+			<div class="header">2</div>
+			<div class="header">3</div>
+			<div class="header">4</div>
+		</div>
+		<div class="content">
+			<div class="panel active">panel1</div>
+			<div class="panel">panel2</div>
+			<div class="panel">panel3</div>
+			<div class="panel">panel4</div>
+		</div>
+	</div>
+	<div class="content-bar">
+		<div class="bar">
+			<div class="header active">1</div>
+			<div class="header">2</div>
+			<div class="header">3</div>
+			<div class="header">4</div>
+		</div>
+		<div class="content">
+			<div class="panel active">panel1</div>
+			<div class="panel">panel2</div>
+			<div class="panel">panel3</div>
+			<div class="panel">panel4</div>
+		</div>
+	</div>	
+	<script>
+		var head = document.querySelectorAll('.header')
+		head.forEach(function(node){
+			node.addEventListener('click',function(){
+				this.parentElement.querySelectorAll('.header').forEach(function(tab){
+					tab.classList.remove('active')
+				})
+				this.classList.add('active')
+				this.parentElement.nextElementSibling.querySelectorAll('.panel').forEach(function(tab){
+					tab.classList.remove('active')
+				})
+				var op = this.parentElement.querySelectorAll('.header');
+     			var index = [].indexOf.call(op, this);
+				this.parentElement.nextElementSibling.querySelectorAll('.panel')[index].classList.add('active')
+			})
+
+		})
+
+	</script>
+</body>
+</html>
