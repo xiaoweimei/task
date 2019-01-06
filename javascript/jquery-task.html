@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+	<meta charset="UTF-8">
+	<title>gallery</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul,li{
+			list-style-type: none;
+		}
+		body{
+			width: 900px;
+			margin: 20px auto; 
+		}
+		figure{
+			margin: 19px;
+			padding: 18px 30px 20px;
+			border: 1px solid #999;
+			float: left;
+			position: relative;
+		}
+		.zhezhao{
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-color: #444;
+			opacity: 0.7;
+		}
+		.delete{
+			display: inline-block;
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.gallery:after{
+			content:'';
+			display: block;
+			clear: both;
+		}
+		.name{
+			font-size: 15px;
+			margin-bottom: 20px;
+		}
+		.price{
+			color: red;
+			font-size: 12px;
+		}
+		button{
+			padding: 8px 12px;
+			color: red;
+			background-color: #fff;
+			border: 1px solid red;
+			border-radius: 2px;
+			cursor: pointer;
+			margin: 17px; 
+		}
+		h1{
+			color: #424242;
+			margin-left: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>珠宝首饰</h1>
+	<div class='gallery'>
+		<figure><img src="https://picsum.photos/200/200/?image=1" alt="">
+			<figcaption class='name'>藏美千足金</figcaption>
+			<figcaption class='price'>￥1699.00</figcaption>
+			
+		</figure>
+		<figure><img src="https://picsum.photos/200/200/?image=2" alt="">
+			<figcaption class="name">和田玉</figcaption>
+			<figcaption class="price">￥1699.00</figcaption>			
+		</figure>
+		<figure><img src="https://picsum.photos/200/200/?image=3" alt="">
+			<figcaption class="name">路路通吊坠</figcaption>
+			<figcaption class="price">￥1699.00</figcaption>
+		</figure>
+<!-- 		<figure><img src="https://picsum.photos/200/200/?image=4" alt="">
+			<figcaption class="name">藏美千足金</figcaption>
+			<figcaption class="price">￥1699.00</figcaption>
+		</figure> -->
+	</div>
+	<button class='append'>添加</button><button class="edit">编辑</button>
+	<script>
+		// var b=Math.floor(Math.random()*100)
+		// var a='<figure><img src="https://picsum.photos/200/200/?image='+Math.floor(Math.random()*100)+'" alt="">'+
+		// 	'<figcaption class="name">珂兰 黄金手 猴哥款</figcaption>' +
+		// 	'<figcaption class="price">￥'+Math.floor(Math.random()*100)+'</figcaption>' +
+		// '</figure>'
+		$('.append').on('click',function(){
+			$('figure').each(function( index ) {
+				console.log($(this))
+				if($(this).children().hasClass('zhezhao')){$(this).children('.zhezhao').remove();}
+				else{console.log('第'+index+'图片没有遮罩')}
+			});
+			var a='<figure><img src="https://picsum.photos/200/200/?image='+Math.floor(Math.random()*100)+'" alt="">'+'<figcaption class="name">珂兰 黄金手 猴哥款</figcaption>' +'<figcaption class="price">￥'+Math.floor(Math.random()*100)+'</figcaption>' +'</figure>';
+			var b='<figure><img src="https://picsum.photos/200/200/?image='+Math.floor(Math.random()*100)+'" alt="">'+'<figcaption class="name">珂兰 黄金手 猴哥款</figcaption>' +'<figcaption class="price">￥'+Math.floor(Math.random()*100)+'</figcaption>' +'</figure>';
+			var c='<figure><img src="https://picsum.photos/200/200/?image='+Math.floor(Math.random()*100)+'" alt="">'+'<figcaption class="name">珂兰 黄金手 猴哥款</figcaption>' +'<figcaption class="price">￥'+Math.floor(Math.random()*100)+'</figcaption>' +'</figure>';
+			$( ".gallery" ).append(a).append(b).append(c)})
+		// $('.edit').on('click',function(){})
+		$('.edit').on('click', function(){
+			$('figure').each(function(){
+				if($(this).children().hasClass('zhezhao')){$(this).children('.zhezhao').remove();}
+				else{
+					console.log($('figure'))
+					$(this).append("<div class='zhezhao'><button class='delete'>删除</button></div>")}
+				})})
+			
+		$('.gallery').on('click', '.delete', function(){
+  			$($(this).parents('figure')).remove()})
+	</script>
+</body>
+</html>
