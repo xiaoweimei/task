@@ -1,2 +1,2 @@
 # task
-some small demo of html and css
+some small demo of html,css,javascript and jquery
