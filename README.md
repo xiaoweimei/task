@@ -1,5 +1,5 @@
 # task
-- some small demo of html,css,javascript and jquery
+- 自己实现的一些关于css、html、javascript以及jquery的小练习
 - [宽300px,高200px,在页面上水平居中](https://xiaoweimei.github.io/task/20181128/centerdemo.html)
 - [固定宽高在页面水平垂直居中](https://xiaoweimei.github.io/task/20181128/eight.html)
 - [不定宽高在块体内水平垂直居中](https://xiaoweimei.github.io/task/20181128/five.html)
