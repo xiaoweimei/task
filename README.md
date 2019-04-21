@@ -1,7 +1,7 @@
 # task
 - some small demo of html,css,javascript and jquery
 - (宽300px,高200px,在页面上水平居中)[https://xiaoweimei.github.io/task/20181128/centerdemo.html]
-- (垂直居中)[https://xiaoweimei.github.io/task/20181128/eight.html]
+- [垂直居中](https://xiaoweimei.github.io/task/20181128/eight.html)
 - (垂直居中)[https://xiaoweimei.github.io/task/20181128/five.html]
 - (垂直居中)[https://xiaoweimei.github.io/task/20181128/nine.html]
 - (垂直居中)[https://xiaoweimei.github.io/task/20181128/seven.html]
